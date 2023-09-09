@@ -3,11 +3,11 @@ numpy
 torch
 transformers
 scikit-learn
+scikit-multilearn
 nltk
 hydra-core
 matplotlib
-scikit-multilearn
-gensim
-tqdm
-seaborn
-sentencepiece
+ray[tune]
+optuna
+bayesian-optimization
+hyperopt

@@ -6,5 +6,5 @@ files:
 params:
   max_len: 128
   batch_size: 8
-  epochs: 15
-  learning_rate: 0.000005
+  epochs: 20
+  learning_rate: 0.0002
