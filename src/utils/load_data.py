@@ -1,16 +1,20 @@
 import pandas as pd
-from typing import Tuple
 from sklearn.preprocessing import MultiLabelBinarizer
+from pathlib import Path
+from typing import Tuple
 
-def split_into_tokens(text) -> str:
-    return " ".join(text.split())
+def load_dataset(ds_path: Path) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    df = pd.read_json(ds_path)
+
+    return split_dataframe(df)
 
 def split_dataframe(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
-  labels_col = df.pop('labels')
+  y_raw = df['labels']
 
-  y = convert_labels_list_to_columns(labels_col)
+  y = convert_labels_list_to_columns(y_raw)
+  X = df.drop(columns=['labels'])
 
-  return df, y
+  return X, y
 
 def convert_labels_list_to_columns(labels: pd.Series) -> pd.DataFrame:
   mlb = MultiLabelBinarizer()

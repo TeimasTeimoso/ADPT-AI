@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "adpt"
+version = "0.1.0"
+description = "My thesis project source code"
+authors = ["TeimasTeimoso <teimas_2010@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.23.1"
+pandas = "^1.4.3"
+jupyter = "^1.0.0"
+notebook = "^6.4.12"
+scikit-multilearn = "^0.2.0"
+sklearn = "^0.0"
+nltk = "^3.7"
+python-louvain = "^0.16"
+matplotlib = "^3.5.2"
+imblearn = "^0.0"
+lightgbm = "^3.3.2"
+xgboost = "^1.6.2"
+gensim = "^4.2.0"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
